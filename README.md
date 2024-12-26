@@ -10,13 +10,21 @@ To write a program to find the LU Decomposition of a matrix.
 ## Algorithm
 Program 1
 1.Import numpy library.
+
 2.Import lu function from scipy library.
+
 3.Solve LU decomposition using lu_solve() function.
+
 4.print the value.
+
 Program 2
+
 1.import numpy
+
 2.From scipy.linalg import lu ,lu_factor,lu_solve respectively
+
 3.Get the input of matrix values from user using eval
+
 4.Print and solve LU decomposition using lu_solve() function.
 
 
@@ -24,8 +32,8 @@ Program 2
 ~~~
 /*
 Program to find the LU Decomposition of a matrix.
-Developed by: megha S
-RegisterNumber: 24900135
+Developed by: JAVAN RUFUS J
+RegisterNumber: 24002549
 */
 
 import numpy as np
