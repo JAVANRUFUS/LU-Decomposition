@@ -8,46 +8,64 @@ To write a program to find the LU Decomposition of a matrix.
 2. Anaconda – Python 3.7 Installation / Moodle-Code Runner
 
 ## Algorithm
-Program 1
-1.Import numpy library.
+### L and U matrix
+1. Import numpy as np and from scipy.linalg import lu.
 
-2.Import lu function from scipy library.
+2. Prompt the user to enter the matrix and convert it into a NumPy array using matrix=np.array(eval(input())).
 
-3.Solve LU decomposition using lu_solve() function.
+3. Call the lu function from scipy.linalg to decompose the matrix into piv, l_matrix, and u_matrix.
 
-4.print the value.
+4. Print the lower triangular matrix (l_matrix) and the upper triangular matrix (u_matrix).
 
-Program 2
+### LU Decomposition
+1. Import numpy as np and from scipy.linalg import lu_factor and lu_solve.
 
-1.import numpy
+2. Get input for coefficient matrix (A) and constant vector (B).
 
-2.From scipy.linalg import lu ,lu_factor,lu_solve respectively
+3. Perform LU decomposition on A using lu_factor.
 
-3.Get the input of matrix values from user using eval
+4. Solve the system using lu_solve with the decomposition result (X) and B.
 
-4.Print and solve LU decomposition using lu_solve() function.
+5. Print the solution.
 
 
 ## Program:
 ~~~
-/*
-Program to find the LU Decomposition of a matrix.
-Developed by: JAVAN RUFUS J
+Program to find L and U matrix using LU decomposition.
+Developed by: Javan rufus j
 RegisterNumber: 24002549
-*/
+
 
 import numpy as np
+from scipy.linalg import lu
+matrix=np.array(eval(input()))
+piv,l_matrix,u_matrix=lu(matrix)
+print(l_matrix)
+print(u_matrix)
+
+```
+(ii) To find the LU Decomposition of a matrix
+```
+Program to solve a matrix using LU decomposition.
+Developed by: JYOTSHANA S R
+RegisterNumber: 24006322
+
+
+# To print X matrix (solution to the equations)
+import numpy as np
 from scipy.linalg import lu_factor,lu_solve
-a=np.array (eval(input()))
-b=np.array (eval(input()))
-lu,piv=lu_factor(a)
-x=lu_solve((lu,piv),b)
-print(x)
+matrix=np.array(eval(input()))
+b=np.array(eval(input()))
+x=lu_factor(matrix)
+solution=lu_solve(x,b)
+print(solution)
 
 ~~~
 
 ## Output:
-![lu decomposition]()![Alt text](<Screenshot from 2024-12-26 10-45-03.png>)
+![lu decomposition](![Alt text](<Screenshot from 2024-12-26 14-04-52.png>))
+
+![output](![Alt text](<Screenshot from 2024-12-26 14-05-07.png>))
 
 
 ## Result:
